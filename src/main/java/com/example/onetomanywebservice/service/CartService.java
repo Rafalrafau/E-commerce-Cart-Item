@@ -61,7 +61,7 @@ public class CartService {
             throw new ItemIsAlreadyAssignedException(itemId, item.getCart().getId());
         }
         cart.addItem(item);
-
+        item.setCart(cart);
         return cart;
     }
 
